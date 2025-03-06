@@ -278,7 +278,12 @@ export default function Home() {
                 <span>Instant Publishing to Stakeholders</span>
               </li>
             </ul>
-            <Button className="mt-8 bg-gradient-to-r from-[#4ca475] to-[#4ca475] text-lg text-black hover:opacity-90">
+            <Button
+              className="mt-8 bg-gradient-to-r from-[#4ca475] to-[#4ca475] text-lg text-black hover:opacity-90 cursor-pointer"
+              onClick={() => {
+                window.open("https://app.autocl.live", "_blank");
+              }}
+            >
               Start Now
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
