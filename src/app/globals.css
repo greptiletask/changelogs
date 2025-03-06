@@ -123,4 +123,8 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  .markdown-content p {
+    margin-bottom: 1rem; /* Adds space between paragraphs */
+  }
 }

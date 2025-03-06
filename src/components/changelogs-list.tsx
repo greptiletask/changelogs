@@ -48,6 +48,11 @@ export function ChangelogList({
     setFilteredChangelogs(filtered);
   }, [searchQuery, changelogs]);
 
+  marked.setOptions({
+    gfm: true,
+    breaks: true, // Treat single line breaks as `<br>`
+  });
+
   // Function to parse and highlight different types of changes
   const renderChangelogContent = (content: string) => {
     // Add custom styling to the markdown
@@ -133,7 +138,7 @@ export function ChangelogList({
 
                 <CardContent className="pt-4">
                   <div
-                    className="changelog-content prose prose-sm dark:prose-invert max-w-none"
+                    className="changelog-content prose prose-sm dark:prose-invert max-w-none markdown-content"
                     dangerouslySetInnerHTML={renderChangelogContent(
                       changelog.changelog
                     )}
