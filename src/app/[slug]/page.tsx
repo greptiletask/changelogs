@@ -9,8 +9,7 @@ const Page = async ({ params }: { params: { slug: string } }) => {
   console.log(changelogs.data.changelogs, "changelogs on page server side");
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-2xl font-bold">Changelogs</h1>
-      <ChangelogList changelogs={changelogs.data.changelogs} />
+      <ChangelogList changelogs={changelogs.data.changelogs} slug={slug} />
     </div>
   );
 };
