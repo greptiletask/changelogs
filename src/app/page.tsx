@@ -296,20 +296,6 @@ export default function Home() {
           <p className="text-sm text-gray-400">
             © {new Date().getFullYear()} AutoCL. All rights reserved.
           </p>
-          <div className="flex space-x-6">
-            <Link
-              className="text-sm text-gray-400 hover:text-[#4ca475]"
-              href="#"
-            >
-              Privacy
-            </Link>
-            <Link
-              className="text-sm text-gray-400 hover:text-[#4ca475]"
-              href="#"
-            >
-              Terms
-            </Link>
-          </div>
         </div>
       </footer>
     </div>
