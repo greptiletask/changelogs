@@ -13,7 +13,7 @@ interface CommandPaletteProps {
   setSearchQuery: (query: string) => void;
 }
 
-export default function CommandPalette({
+export function CommandPalette({
   isOpen,
   setIsOpen,
   changelogs,
@@ -34,12 +34,21 @@ export default function CommandPalette({
   const handleSelect = (changelogId: string) => {
     setIsOpen(false);
 
-    // Scroll to the selected changelog
     setTimeout(() => {
       const element = document.getElementById(`changelog-${changelogId}`);
       if (element) {
         element.scrollIntoView({ behavior: "smooth", block: "start" });
+
         element.classList.add("highlight-animation");
+
+        const dot = element.querySelector(".timeline-dot");
+        if (dot) {
+          dot.classList.add("ring-4", "ring-primary", "ring-opacity-50");
+          setTimeout(() => {
+            dot.classList.remove("ring-4", "ring-primary", "ring-opacity-50");
+          }, 2000);
+        }
+
         setTimeout(() => {
           element.classList.remove("highlight-animation");
         }, 2000);
@@ -52,7 +61,6 @@ export default function CommandPalette({
     setSearchQuery(value);
   };
 
-  // Function to extract a snippet of text around the search term
   const getSnippet = (text: string, searchTerm: string, maxLength = 100) => {
     if (!searchTerm) return text.slice(0, maxLength) + "...";
 
@@ -149,3 +157,5 @@ export default function CommandPalette({
     </Dialog>
   );
 }
+
+export default CommandPalette;
