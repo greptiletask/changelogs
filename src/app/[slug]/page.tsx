@@ -34,7 +34,13 @@ export default function Page() {
   return (
     <div className="container mx-auto px-4 py-8">
       {isLoading ? (
-        <Skeleton className="h-[500px] w-full" />
+        <div className="flex flex-col gap-4">
+          <Skeleton className="h-[75px] w-full" />
+          <Skeleton className="h-[75px] w-full" />
+          <Skeleton className="h-[75px] w-full" />
+          <Skeleton className="h-[75px] w-full" />
+          <Skeleton className="h-[75px] w-full" />
+        </div>
       ) : (
         <ChangelogList changelogs={changelogs} slug={slug} />
       )}
