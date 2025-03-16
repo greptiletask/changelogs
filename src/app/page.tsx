@@ -9,21 +9,33 @@ import {
   Lock,
   Wallet,
   FileText,
+  Sun,
+  Moon,
 } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-
+import { useTheme } from "next-themes";
+import { useEffect } from "react";
 export default function Home() {
+  const { theme, setTheme } = useTheme();
+  useEffect(() => {}, [theme]);
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-background text-foreground">
       {/* Navigation */}
-      <header className="fixed top-0 z-50 w-full border-b border-white/10 bg-black/50 backdrop-blur-xl">
+      <header className="fixed top-0 z-50 w-full border-b border-white/10 bg-background backdrop-blur-xl">
         <div className="flex h-16 items-center justify-between px-4">
           <Link className="flex items-center space-x-2 font-bold" href="/">
             <FileText className="h-6 w-6 text-blue-500" />
             <span>AutoCL</span>
           </Link>
           <div className="flex items-center space-x-4">
+            <div className="p-2 rounded-md bg-secondary cursor-pointer">
+              {theme === "dark" ? (
+                <Moon className="h-5 w-5" onClick={() => setTheme("light")} />
+              ) : (
+                <Sun className="h-5 w-5" onClick={() => setTheme("dark")} />
+              )}
+            </div>
             <Button
               className="bg-transparent hover:bg-transparent text-blue-500 border border-blue-500 cursor-pointer"
               onClick={() => {
@@ -177,7 +189,7 @@ export default function Home() {
 
             <div className="flex justify-center space-x-4">
               <Button
-                className="bg-gradient-to-r from-blue-500 to-blue-500 text-lg text-black hover:opacity-90 cursor-pointer"
+                className="bg-gradient-to-r from-blue-500 to-blue-500 text-lg text-background hover:opacity-90 cursor-pointer"
                 onClick={() => {
                   window.open("https://app.autocl.live", "_blank");
                 }}
@@ -193,7 +205,7 @@ export default function Home() {
       {/* Features Section */}
       <section
         id="features"
-        className="relative z-10 border-t border-white/10 bg-black py-24"
+        className="relative z-10 border-t border-white/10 bg-background py-24"
       >
         <div className="px-4">
           <div className="mb-16 text-center">
@@ -210,7 +222,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
-              className="group rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition-colors hover:border-blue-500/50"
+              className="group rounded-2xl border border-border bg-muted/50 p-6 backdrop-blur-sm transition-colors hover:border-blue-500/50"
             >
               <CreditCard className="mb-4 h-12 w-12 text-blue-500" />
               <h3 className="mb-2 text-xl font-bold">Effortless Summaries</h3>
@@ -225,7 +237,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true }}
-              className="group rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition-colors hover:border-blue-500/50"
+              className="group rounded-2xl border border-border bg-muted/50 p-6 backdrop-blur-sm transition-colors hover:border-blue-500/50"
             >
               <LineChart className="mb-4 h-12 w-12 text-blue-500" />
               <h3 className="mb-2 text-xl font-bold">Developer Insights</h3>
@@ -240,7 +252,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
-              className="group rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition-colors hover:border-blue-500/50"
+              className="group rounded-2xl border border-border bg-muted/50 p-6 backdrop-blur-sm transition-colors hover:border-blue-500/50"
             >
               <Lock className="mb-4 h-12 w-12 text-blue-500" />
               <h3 className="mb-2 text-xl font-bold">Secure & Private</h3>
@@ -254,7 +266,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative z-10 border-t border-white/10 bg-black py-24">
+      <section className="relative z-10 border-t border-white/10 bg-background py-24">
         <div className="px-4">
           <div className="mx-auto max-w-3xl rounded-2xl border border-white/10 bg-blue-500/5 p-8 text-center backdrop-blur-sm md:p-12 lg:p-16">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
@@ -279,7 +291,7 @@ export default function Home() {
               </li>
             </ul>
             <Button
-              className="mt-8 bg-gradient-to-r from-blue-500 to-blue-500 text-lg text-black hover:opacity-90 cursor-pointer"
+              className="mt-8 bg-gradient-to-r from-blue-500 to-blue-500 text-lg text-background hover:opacity-90 cursor-pointer"
               onClick={() => {
                 window.open("https://app.autocl.live", "_blank");
               }}
@@ -292,7 +304,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-white/10 bg-black py-8">
+      <footer className="border-t border-white/10 bg-background py-8">
         <div className="flex flex-col items-center justify-between space-y-4 px-4 md:flex-row md:space-y-0">
           <div className="flex items-center space-x-2">
             <FileText className="h-6 w-6 text-blue-500" />
