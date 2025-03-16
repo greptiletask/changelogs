@@ -20,12 +20,12 @@ export default function Home() {
       <header className="fixed top-0 z-50 w-full border-b border-white/10 bg-black/50 backdrop-blur-xl">
         <div className="flex h-16 items-center justify-between px-4">
           <Link className="flex items-center space-x-2 font-bold" href="/">
-            <FileText className="h-6 w-6 text-[#4ca475]" />
+            <FileText className="h-6 w-6 text-blue-500" />
             <span>AutoCL</span>
           </Link>
           <div className="flex items-center space-x-4">
             <Button
-              className="bg-transparent hover:bg-transparent text-[#4ca475] border border-[#4ca475] cursor-pointer"
+              className="bg-transparent hover:bg-transparent text-blue-500 border border-blue-500 cursor-pointer"
               onClick={() => {
                 window.open("https://app.autocl.live", "_blank");
               }}
@@ -47,14 +47,14 @@ export default function Home() {
           >
             <defs>
               <linearGradient id="grad1" x1="1" y1="0" x2="0" y2="0">
-                <stop offset="0%" stopColor="#4ca475" stopOpacity="0" />
-                <stop offset="50%" stopColor="#4ca475" stopOpacity="0.5" />
-                <stop offset="100%" stopColor="#4ca475" stopOpacity="0" />
+                <stop offset="0%" stopColor="#3B82F6" stopOpacity="0" />
+                <stop offset="50%" stopColor="#3B82F6" stopOpacity="0.5" />
+                <stop offset="100%" stopColor="#3B82F6" stopOpacity="0" />
               </linearGradient>
               <linearGradient id="grad2" x1="1" y1="0" x2="0" y2="0">
-                <stop offset="0%" stopColor="#4ca475" stopOpacity="0" />
-                <stop offset="50%" stopColor="#4ca475" stopOpacity="0.5" />
-                <stop offset="100%" stopColor="#4ca475" stopOpacity="0" />
+                <stop offset="0%" stopColor="#3B82F6" stopOpacity="0" />
+                <stop offset="50%" stopColor="#3B82F6" stopOpacity="0.5" />
+                <stop offset="100%" stopColor="#3B82F6" stopOpacity="0" />
               </linearGradient>
             </defs>
 
@@ -137,7 +137,7 @@ export default function Home() {
                   top: `${15 + i * 10}%`,
                   height: "1px",
                   width: "100%",
-                  background: `linear-gradient(90deg, transparent, #4ca47560, transparent)`,
+                  background: `linear-gradient(90deg, transparent, #3B82F660, transparent)`,
                 }}
               />
             ))}
@@ -150,13 +150,13 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 2 }}
-            className="absolute -left-1/4 top-1/4 h-96 w-96 rounded-full bg-[#4ca475]/30 blur-3xl"
+            className="absolute -left-1/4 top-1/4 h-96 w-96 rounded-full bg-blue-500/30 blur-3xl"
           />
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 2, delay: 0.5 }}
-            className="absolute -right-1/4 top-1/2 h-96 w-96 rounded-full bg-[#4ca475]/30 blur-3xl"
+            className="absolute -right-1/4 top-1/2 h-96 w-96 rounded-full bg-blue-500/30 blur-3xl"
           />
         </div>
 
@@ -171,13 +171,13 @@ export default function Home() {
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
               AutoCL
             </h1>
-            <p className="text-lg text-[#4ca475] sm:text-xl">
+            <p className="text-lg text-blue-500 sm:text-xl">
               One click changelogs for your projects.
             </p>
 
             <div className="flex justify-center space-x-4">
               <Button
-                className="bg-gradient-to-r from-[#4ca475] to-[#4ca475] text-lg text-black hover:opacity-90 cursor-pointer"
+                className="bg-gradient-to-r from-blue-500 to-blue-500 text-lg text-black hover:opacity-90 cursor-pointer"
                 onClick={() => {
                   window.open("https://app.autocl.live", "_blank");
                 }}
@@ -210,9 +210,9 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
-              className="group rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition-colors hover:border-[#4ca475]/50"
+              className="group rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition-colors hover:border-blue-500/50"
             >
-              <CreditCard className="mb-4 h-12 w-12 text-[#4ca475]" />
+              <CreditCard className="mb-4 h-12 w-12 text-blue-500" />
               <h3 className="mb-2 text-xl font-bold">Effortless Summaries</h3>
               <p className="text-gray-400">
                 Let AI summarize your commit messages into readable updates with
@@ -225,9 +225,9 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true }}
-              className="group rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition-colors hover:border-[#4ca475]/50"
+              className="group rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition-colors hover:border-blue-500/50"
             >
-              <LineChart className="mb-4 h-12 w-12 text-[#4ca475]" />
+              <LineChart className="mb-4 h-12 w-12 text-blue-500" />
               <h3 className="mb-2 text-xl font-bold">Developer Insights</h3>
               <p className="text-gray-400">
                 Turn raw commit data into high-level, developer-friendly
@@ -240,9 +240,9 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
-              className="group rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition-colors hover:border-[#4ca475]/50"
+              className="group rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition-colors hover:border-blue-500/50"
             >
-              <Lock className="mb-4 h-12 w-12 text-[#4ca475]" />
+              <Lock className="mb-4 h-12 w-12 text-blue-500" />
               <h3 className="mb-2 text-xl font-bold">Secure & Private</h3>
               <p className="text-gray-400">
                 We respect your codebase, ensuring encrypted data processing and
@@ -256,7 +256,7 @@ export default function Home() {
       {/* CTA Section */}
       <section className="relative z-10 border-t border-white/10 bg-black py-24">
         <div className="px-4">
-          <div className="mx-auto max-w-3xl rounded-2xl border border-white/10 bg-[#4ca475]/5 p-8 text-center backdrop-blur-sm md:p-12 lg:p-16">
+          <div className="mx-auto max-w-3xl rounded-2xl border border-white/10 bg-blue-500/5 p-8 text-center backdrop-blur-sm md:p-12 lg:p-16">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
               Ready to Automate Your Changelogs?
             </h2>
@@ -266,20 +266,20 @@ export default function Home() {
             </p>
             <ul className="mx-auto mt-8 flex max-w-xl flex-col gap-4 text-left">
               <li className="flex items-center space-x-3">
-                <CheckCircle2 className="h-5 w-5 text-[#4ca475]" />
+                <CheckCircle2 className="h-5 w-5 text-blue-500" />
                 <span>AI-Powered Summaries</span>
               </li>
               <li className="flex items-center space-x-3">
-                <CheckCircle2 className="h-5 w-5 text-[#4ca475]" />
-                <span>GitHubIntegration</span>
+                <CheckCircle2 className="h-5 w-5 text-blue-500" />
+                <span>GitHub Integration</span>
               </li>
               <li className="flex items-center space-x-3">
-                <CheckCircle2 className="h-5 w-5 text-[#4ca475]" />
+                <CheckCircle2 className="h-5 w-5 text-blue-500" />
                 <span>Instant Publishing to Stakeholders</span>
               </li>
             </ul>
             <Button
-              className="mt-8 bg-gradient-to-r from-[#4ca475] to-[#4ca475] text-lg text-black hover:opacity-90 cursor-pointer"
+              className="mt-8 bg-gradient-to-r from-blue-500 to-blue-500 text-lg text-black hover:opacity-90 cursor-pointer"
               onClick={() => {
                 window.open("https://app.autocl.live", "_blank");
               }}
@@ -295,7 +295,7 @@ export default function Home() {
       <footer className="border-t border-white/10 bg-black py-8">
         <div className="flex flex-col items-center justify-between space-y-4 px-4 md:flex-row md:space-y-0">
           <div className="flex items-center space-x-2">
-            <Wallet className="h-6 w-6 text-[#4ca475]" />
+            <FileText className="h-6 w-6 text-blue-500" />
             <span className="font-bold">AutoCL</span>
           </div>
           <p className="text-sm text-gray-400">
